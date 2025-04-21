@@ -1,0 +1,257 @@
+.app {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 15, 25, 1), rgba(0, 30, 45, 1));
+    color: white;
+    font-family: "Lexend Deca", sans-serif;
+    text-align: center;
+}
+
+.app h1 {
+    font-weight: 300;
+    font-size: 80px;
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+
+.informations {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    background-color: #00364b;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding-right: 2px;
+}
+
+.informations input {
+    width: 80%;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    font-weight: 100;
+}
+
+.informations button {
+    width: 20%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #002433;
+    color: white;
+    padding: 10px 0;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.informations input::placeholder {
+    color: white;
+}
+
+.date {
+    width: 500px;
+    padding: 10px 0;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.date span {
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.list {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: justify;
+}
+
+.list ul {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+}
+
+.list ul::-webkit-scrollbar {
+    display: none;
+}
+
+.list ul li {
+    width: 100%;
+    background-color: #00364b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btns button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btns button .delete {
+    color: red;
+}
+
+.btns button .edit {
+    color: yellow;
+}
+
+.list h2 {
+    text-align: center;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 40px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    padding: 15px;
+}
+
+.modal-content h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #00364b;
+    outline: none;
+    margin-bottom: 25px;
+}
+
+.modal-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-buttons button {
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #00364b;
+    color: white;
+}
+
+.modal-buttons button:last-child {
+    background-color: #f44336;
+}
+
+@media (max-width: 768px) {
+    .app h1 {
+        font-size: 50px;
+    }
+
+    .informations {
+        width: 90%;
+    }
+
+    .date {
+        width: 90%;
+    }
+
+    .list {
+        width: 90%;
+    }
+
+    .list ul {
+        height: 300px;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .app h1 {
+        font-size: 40px;
+    }
+
+    .informations {
+        width: 95%;
+        border-radius: 30px;
+        background-color: transparent;
+        flex-direction: column;
+    }
+
+    .informations input {
+        width: 90%;
+        margin-bottom: 10px;
+        background-color: #00364b;
+        border-radius: 30px;
+    }
+
+    .informations button {
+        width: 90%;
+        padding: 12px 0;
+    }
+
+    .date {
+        width: 90%;
+    }
+
+    .list {
+        width: 90%;
+    }
+
+    .list ul {
+        height: 250px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .btns button {
+        font-size: 18px;
+    }
+}
