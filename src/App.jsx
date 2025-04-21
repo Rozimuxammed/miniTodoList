@@ -3,6 +3,8 @@ import './App.css';
 import { MdDeleteOutline } from 'react-icons/md';
 import { CiEdit } from 'react-icons/ci';
 import { FaFaceSmileWink } from 'react-icons/fa6';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -49,6 +51,7 @@ function App() {
     const title = formData.get("title").trim();  // Titleni olish va bo'sh joylarni olib tashlash
 
     if (!title) {
+      toast.warning("Iltimos, ma'lumot kiriting!");
       return;
     }
 
@@ -113,6 +116,7 @@ function App() {
           </div>
         </div>
       )}
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 }
