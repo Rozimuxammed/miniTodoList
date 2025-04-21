@@ -46,10 +46,13 @@ function App() {
   const handleClick = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    const res = { title: formData.get("title"), id: Date.now() };
+    const title = formData.get("title").trim();  // Titleni olish va bo'sh joylarni olib tashlash
+
     if (!title) {
       return;
     }
+
+    const res = { title, id: Date.now() };
     addTodo(res);
     e.target.reset();
   };
@@ -93,7 +96,6 @@ function App() {
         </ul>
       </div>
 
-      {/* Modal */}
       {modal && (
         <div className="modal">
           <div className="modal-content">
