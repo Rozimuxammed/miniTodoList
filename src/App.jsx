@@ -47,6 +47,9 @@ function App() {
     e.preventDefault();
     const formData = new FormData(e.target);
     const res = { title: formData.get("title"), id: Date.now() };
+    if (!title) {
+      return;
+    }
     addTodo(res);
     e.target.reset();
   };
